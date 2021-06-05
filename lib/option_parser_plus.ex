@@ -1,21 +1,21 @@
-defmodule CmdParamsParser do
+defmodule OptionParserPlus do
   @moduledoc """
   `OptionParserPlus receives the same arguments as option parser,
   When the strict option is specified then it checks also 
   if keys that were passed but not set on the command line 
   are set as env variables written with capital letters
 
-  iex(1)> CmdParamsParser.parse([], strict: [debug: :boolean])
+  iex(1)> OptionParserPlus.parse([], strict: [debug: :boolean])
   {[debug: false], [], []}
   iex(2)> System.put_env("DEBUG", "true")
   :ok
-  iex(3)> CmdParamsParser.parse([], strict: [debug: :boolean])
+  iex(3)> OptionParserPlus.parse([], strict: [debug: :boolean])
   {[debug: true], [], []}
-  iex(4)> CmdParamsParser.parse([], strict: [debug: :string])
+  iex(4)> OptionParserPlus.parse([], strict: [debug: :string])
   {[debug: "true"], [], []}
   iex(5)> System.delete_env("DEBUG")
   :ok
-  iex(6)> CmdParamsParser.parse([], strict: [debug: :string])
+  iex(6)> OptionParserPlus.parse([], strict: [debug: :string])
   {[], [], []}
   """
 
