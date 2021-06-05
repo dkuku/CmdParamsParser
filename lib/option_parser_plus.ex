@@ -1,6 +1,6 @@
 defmodule CmdParamsParser do
   @moduledoc """
-  `CmdParser receives the same arguments as option parser,
+  `OptionParserPlus receives the same arguments as option parser,
   When the strict option is specified then it checks also 
   if keys that were passed but not set on the command line 
   are set as env variables written with capital letters

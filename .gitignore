@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-cmd_parser-*.tar
+option_parser_plus-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
